@@ -1,0 +1,110 @@
+.header {
+  height: 100px;
+  width: 100vw;
+  background-color: #b63e3e;
+}
+
+.header .menus {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100px;
+}
+
+.header .menus #logo {
+  color: #3ae22b;
+}
+
+.header .menus .menuDesk ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header .menus .menuDesk ul a {
+  margin-left: 20px;
+  color: aqua;
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .header .menus .menu-toggle {
+    float: right;
+  }
+  .header .menus .menu-toggle .one, .header .menus .menu-toggle .two, .header .menus .menu-toggle .tree {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    width: 30px;
+    height: 5px;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+  }
+  .header .menus .menuDesk {
+    display: none;
+  }
+  .on {
+    background-color: #b63e3e;
+    height: 100vh;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  .on .menus {
+    padding-top: 35px;
+    display: block;
+  }
+  .on .menus #logo {
+    float: left;
+    margin-top: 6px;
+  }
+  .on .menus .menu-toggle .one {
+    -webkit-transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(7px, 7px);
+  }
+  .on .menus .menu-toggle .two {
+    opacity: 0;
+  }
+  .on .menus .menu-toggle .tree {
+    -webkit-transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(7px, -7px);
+  }
+  .on .menus .menuDesk {
+    display: block;
+    margin-top: 20%;
+  }
+  .on .menus .menuDesk ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .on .menus .menuDesk ul a {
+    margin-left: 20px;
+    color: aqua;
+  }
+  .on .menus .menuDesk ul a li {
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=menu.css.map */

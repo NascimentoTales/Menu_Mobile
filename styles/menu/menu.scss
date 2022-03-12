@@ -1,0 +1,94 @@
+.header{
+    height: 100px;
+    width: 100vw;
+    background-color: rgb(182, 62, 62);
+    
+    .menus{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        #logo{
+            color: rgb(58, 226, 43);
+        }
+        .menuDesk{
+            // border: 1px solid black;
+            ul{
+                display: flex;
+                flex-direction: row;
+                a{
+                    margin-left: 20px;  
+                    color: aqua;
+                    li{
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+@media screen and (max-width: 550px){
+    .header{
+        transition: 0.5s;
+        .menus{
+            .menu-toggle{
+                float: right;
+                .one, .two, .tree{
+                    transition: 0.5s;
+                    width: 30px;
+                    height: 5px;
+                    background-color: aliceblue;
+                    margin-bottom: 5px;
+                }
+            }
+            .menuDesk{
+                display: none;
+            }
+        }
+    }
+    .on{
+        background-color: rgb(182, 62, 62);
+        height: 100vh;
+        transition: 300ms;
+        .menus{
+            padding-top: 35px;
+            display: block;
+            #logo{
+                float: left;
+                margin-top: 6px;
+            }
+            .menu-toggle{
+                .one{
+                    transform: rotate(45deg) translate(7px, 7px);
+                }
+                .two{
+                    opacity: 0;
+                }
+                .tree{
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
+            }
+            .menuDesk{
+                display: block;
+                margin-top: 20%;
+                ul{
+                    display: flex;
+                    margin: auto;
+                    flex-direction: column;
+                    align-items: center;
+                    a{
+                        margin-left: 20px;  
+                        color: aqua;
+                        li{
+                            padding: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+    
